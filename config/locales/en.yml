@@ -20,4 +20,5 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  app-title: "GigPortal"
+  app-description: "A portal where you can buy tickets for gigs"
