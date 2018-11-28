@@ -28,6 +28,8 @@
  $black:   #2f3640 !default;
 
 $navbar-dark-color:$white !default;
+$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-base: 'Cabin', $font-family-sans-serif !default;
 
 @import 'bootstrap';
 
@@ -50,5 +52,41 @@ body{
      font-size:1.3em;
      color:$secondary-color;
      text-shadow:-1px 1px rgba(0,0,0,0.6);
+   }
+ }
+
+ footer{
+
+   .container{
+     padding:20px;
+     border-top:1px solid $gray-300;
+   }
+
+   .copyright{
+     font-size:1em;
+     color:$gray-700;
+     text-align:right;
+   }
+
+   .footer-brand{
+     font-family: $GP_FONT;
+     font-size:1em;
+     color:$gray-500;
+     text-align:center;
+   }
+
+   @media (max-width: 767px) {
+     .container{
+       padding:10px;
+       margin-bottom:0;
+     }
+     .copyright{
+       text-align:center;
+       margin-top:10px;
+     }
+     .brand{
+       text-align:center !important;
+       font-size:1.6em;
+     }
    }
  }
