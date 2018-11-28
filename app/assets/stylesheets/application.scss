@@ -10,9 +10,45 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
  *= require_self
+ *= require_tree .
  */
 
- @import 'bootstrap-sprockets';
- @import 'bootstrap';
+ $white:   #f5f6fa !default;
+ $blue:    #40739e !default;
+ $indigo:  #192a56 !default;
+ $purple:  #8c7ae6 !default;
+ $pink:    #e83e8c !default;
+ $red:     #c23616 !default;
+ $orange:  #fd7e14 !default;
+ $yellow:  #fbc531 !default;
+ $green:   #44bd32 !default;
+ $teal:    #20c997 !default;
+ $cyan:    #0097e6 !default;
+ $black:   #2f3640 !default;
+
+$navbar-dark-color:$white !default;
+
+@import 'bootstrap';
+
+$GP_FONT: 'Pacifico', cursive;
+$primary-color: #40739e;
+$primary-light: #487eb0;
+$secondary-color: #f5f6fa;
+
+body{
+  padding-top:65px;
+}
+
+ nav{
+   background-color:$primary-color;
+   border-radius:0 !important;
+   border-bottom: 1px solid $secondary-color;
+
+   .navbar-brand{
+     font-family: $GP_FONT;
+     font-size:1.3em;
+     color:$secondary-color;
+     text-shadow:-1px 1px rgba(0,0,0,0.6);
+   }
+ }
