@@ -4,6 +4,32 @@
 
 
 
+
+// html{
+//   background: image-url("bg.jpg") no-repeat center center fixed !important;
+// }
+//
+// body{
+//   background-color:transparent !important;
+// }
+
+//*--------------HOME SECTION---------------*//
+#home{
+
+  h1{
+    font-size:4em;
+    padding:30px;
+
+    span{
+      color:#40739e;
+      font-family:'Pacifico', cursive;
+    }
+  }
+
+}
+
+
+
 //*--------------CONTACT SECTION---------------*//
 #contact{
   padding-top:30px;

@@ -12,6 +12,7 @@
  *
  *= require_self
  *= require_tree .
+ *
  */
 
  $white:   #f5f6fa !default;
@@ -33,6 +34,8 @@ $font-family-base: 'Cabin', $font-family-sans-serif !default;
 
 @import 'bootstrap';
 
+
+
 $GP_FONT: 'Pacifico', cursive;
 $primary-color: #40739e;
 $primary-light: #487eb0;
@@ -45,7 +48,7 @@ body{
  nav{
    background-color:$primary-color;
    border-radius:0 !important;
-   border-bottom: 1px solid $secondary-color;
+   border-bottom: 1px solid darken($blue, 10);
 
    .navbar-brand{
      font-family: $GP_FONT;
@@ -56,10 +59,11 @@ body{
  }
 
  footer{
+   background-color:$white;
+   border-top:3px solid $blue;
 
    .container{
      padding:20px;
-     border-top:1px solid $gray-300;
    }
 
    .copyright{
