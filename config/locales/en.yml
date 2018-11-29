@@ -27,3 +27,18 @@ en:
     nav:
       home: "HOME"
       contact: "CONTACT"
+
+  home:
+    contact:
+      title: "Contact Us"
+      description: "If you have any problems or even just some general feedback, why not send us a message using the contact form below?"
+
+      name: "Name:"
+      enter-name: "Enter your name"
+      email: "Email:"
+      enter-email: "Enter your email address"
+      telephone: "Telephone:"
+      enter-telephone: "Enter your telephone number"
+      message: "Message:"
+      enter-message: "Enter your message"
+      submit: "Send"

@@ -1,1 +1,22 @@
-<h1>Contact GigPortal</h1>
+<div class='container' id='contact'>
+  <h1><%= t('.title') %></h1>
+  <p><%= t('.description') %></p>
+
+  <%= form_tag request_contact_path, method: 'post',class: 'form-group' do %>
+    <%= label_tag :name, t('.name') %>
+    <%= text_field_tag :name, '', title: t('.enter-name'), size: 50, class: 'form-control', placeholder: t('.enter-name') %>
+
+    <%= label_tag :email, t('.email') %>
+    <%= email_field_tag :email, '', title: t('.enter-email'), class: 'form-control', placeholder: t('.enter-email')%>
+
+    <%= label_tag :telephone, t('.telephone') %>
+    <%= telephone_field_tag :telephone, '', title: t('.enter-telephone'), class: 'form-control', placeholder: t('.enter-telephone')%>
+
+    <%= label_tag :message, t('.message') %>
+    <%= text_area_tag :message, '', title: t('.enter-message'), size: 100, class: 'form-control', placeholder: t('.enter-message')%>
+
+    <%= submit_tag t('.submit'), class:'btn btn-primary' %>
+
+  <% end -%>
+
+</div>

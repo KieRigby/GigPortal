@@ -1,3 +1,33 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+//*--------------CONTACT SECTION---------------*//
+#contact{
+  padding-top:30px;
+  padding-left:50px;
+
+  h1{
+    font-weight:bold;
+  }
+
+  form label{
+    margin-bottom:0px;
+  }
+
+  form input[type=text],form input[type=email], form input[type=tel]{
+    display:block;
+    margin-bottom:20px;
+    background-color:#fff;
+  }
+  form textarea{
+    display:block;
+    background-color:#fff;
+  }
+  form input[type=submit]{
+    margin-top:5px;
+  }
+
+}
