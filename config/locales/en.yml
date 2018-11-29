@@ -43,5 +43,5 @@ en:
       enter-message: "Enter your message"
       submit: "Send"
 
-      no-email: "Please provide us with an email to contact you"
+      no-email: "Please provide us with an email to contact you on."
       email-sent: "Thanks! Your message has been sent and we will aim to get back to you within 24 hours."

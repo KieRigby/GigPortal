@@ -12,9 +12,9 @@ class HomeController < ApplicationController
     message = params[:message]
 
     if email.blank?
-      flash[:alert] = L18N.t('home.contact.no-email')
+      flash[:danger] = I18n.t('home.contact.no-email')
     else
-      flash[:notice] = L18N.t('home.contact.email-sent')
+      flash[:success] = I18n.t('home.contact.email-sent')
     end
 
     redirect_to contact_path

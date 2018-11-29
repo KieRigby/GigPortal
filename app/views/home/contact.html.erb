@@ -2,6 +2,8 @@
   <h1><%= t('.title') %></h1>
   <p><%= t('.description') %></p>
 
+  <%= render 'shared/flash' %>
+
   <%= form_tag request_contact_path, method: 'post',class: 'form-group' do %>
     <%= label_tag :name, t('.name') %>
     <%= text_field_tag :name, '', title: t('.enter-name'), size: 50, class: 'form-control', placeholder: t('.enter-name') %>
