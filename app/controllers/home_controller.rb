@@ -14,6 +14,7 @@ class HomeController < ApplicationController
     if email.blank?
       flash[:danger] = I18n.t('home.contact.no-email')
     else
+      ContactMailer.contact_email(email,name,telephone,message).deliver_now
       flash[:success] = I18n.t('home.contact.email-sent')
     end
 

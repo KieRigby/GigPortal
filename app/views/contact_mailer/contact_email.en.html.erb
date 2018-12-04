@@ -1,0 +1,20 @@
+<div class='container'>
+  <p>
+    <%= "Dear #{t('.app-title')}," %>
+    Could you get in contact with me please?
+  </p>
+
+  <dl>
+    <dt>Name:</dt>
+    <dd><%= @name %></dd>
+    <dt>Email:</dt>
+    <dd><%= @email %></dd>
+    <dt>Telephone:</dt>
+    <dd><%= @telephone %></dd>
+  </dl>
+
+  <p><%= @message %></p>
+
+  <p>Thanks,</p>
+  <p><%= @name %></p>
+</div>
