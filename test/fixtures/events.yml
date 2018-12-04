@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  short_description: MyString
+  long_description: MyText
+  location: MyString
+  location_tbc: false
+  date: 2018-12-04 07:44:02
+  date_tbc: false
+  published: false
+
+two:
+  title: MyString
+  short_description: MyString
+  long_description: MyText
+  location: MyString
+  location_tbc: false
+  date: 2018-12-04 07:44:02
+  date_tbc: false
+  published: false
