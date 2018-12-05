@@ -1,6 +1,8 @@
 <div class='container' id='events'>
   <div class='row'>
-    <div class='col-md-12'><h1>Events</h1><p id="notice"><%= notice %></p></div>
+    <div class='col-md-12'>
+    <h1><%= t('.title') %></h1>
+    <p id="notice"><%= notice %></p></div>
   </div>
   <div class='row'>
     <% @events.each do |event| %>

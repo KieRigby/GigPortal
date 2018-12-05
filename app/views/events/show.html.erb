@@ -12,9 +12,9 @@
       <h1><%= @event.title %></h1>
       <span><%= @event.location %> - <%= @event.date.to_formatted_s(:short) %></span>
       <p><%= @event.long_description %></p>
-      <button type='button' class='btn btn-success'>Get Tickets</button>
+      <button type='button' class='btn btn-success'><%= fa_icon "ticket", text: t('.get-tickets') %></button>
     </div>
   </div>
 </div>
 
-<%# <%= link_to 'Edit', edit_event_path(@event) %> 
+<%# <%= link_to 'Edit', edit_event_path(@event) %>
