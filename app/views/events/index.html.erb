@@ -1,6 +1,6 @@
 <div class='container' id='events'>
   <div class='row'>
-    <div class='col-md-12'><h1>Events</h1></div>
+    <div class='col-md-12'><h1>Events</h1><p id="notice"><%= notice %></p></div>
   </div>
   <div class='row'>
     <% @events.each do |event| %>
@@ -17,7 +17,7 @@
 </div>
 
 
-  <p id="notice"><%= notice %></p>
+
 
   <%# <%= link_to 'Show', event %>
   <%# <%= link_to 'Edit', edit_event_path(event) %>
@@ -26,4 +26,4 @@
 
   <!-- <br>
 
-  <%# <%= link_to 'New Event', new_event_path %> --> 
+  <%# <%= link_to 'New Event', new_event_path %> -->

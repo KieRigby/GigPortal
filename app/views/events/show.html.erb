@@ -1,44 +1,20 @@
-<p id="notice"><%= notice %></p>
+<div class='container' id='show-event'>
+  <div class='row'>
+    <div class='col-md-12'>
+      <p id="notice"><%= notice %></p>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-md-4'>
+      <img src='https://placeimg.com/500/500/people' alt='<%= @event.title %>'>
+    </div>
+    <div class='col-md-8'>
+      <h1><%= @event.title %></h1>
+      <span><%= @event.location %> - <%= @event.date.to_formatted_s(:short) %></span>
+      <p><%= @event.long_description %></p>
+      <button type='button' class='btn btn-success'>Get Tickets</button>
+    </div>
+  </div>
+</div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @event.title %>
-</p>
-
-<p>
-  <strong>Short description:</strong>
-  <%= @event.short_description %>
-</p>
-
-<p>
-  <strong>Long description:</strong>
-  <%= @event.long_description %>
-</p>
-
-<p>
-  <strong>Location:</strong>
-  <%= @event.location %>
-</p>
-
-<p>
-  <strong>Location tbc:</strong>
-  <%= @event.location_tbc %>
-</p>
-
-<p>
-  <strong>Date:</strong>
-  <%= @event.date %>
-</p>
-
-<p>
-  <strong>Date tbc:</strong>
-  <%= @event.date_tbc %>
-</p>
-
-<p>
-  <strong>Published:</strong>
-  <%= @event.published %>
-</p>
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<%# <%= link_to 'Edit', edit_event_path(@event) %> 
