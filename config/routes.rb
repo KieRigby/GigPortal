@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :events
   #Root view to the home controller home action
   root 'home#home'
   #Contact routes

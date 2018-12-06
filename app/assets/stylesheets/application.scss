@@ -47,11 +47,19 @@ body{
   padding-top:65px;
 }
 
+<<<<<<< HEAD
 .wrapper{
   min-height:75vh;
 }
 
 nav{
+=======
+h1,h2,h3,h4,h5,h6{
+  font-weight:bold;
+}
+
+ nav{
+>>>>>>> feature/events
    background-color:$primary-color;
    border-radius:0 !important;
    border-bottom: 1px solid darken($blue, 10);

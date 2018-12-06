@@ -1,0 +1,33 @@
+<div class='container' id='events'>
+  <div class='row'>
+    <div class='col-md-12'>
+    <h1><%= t('.title') %></h1>
+    <% if !notice.blank? %>
+      <div class='alert alert-success animated fadeInUp'><%= notice %></div>
+    <% end %>
+  </div>
+  <div class='row'>
+    <% @events.each do |event| %>
+    <div class='col-md-4'>
+      <div class='event'>
+        <img src='https://placeimg.com/500/500/people' alt='<%= event.title %>'>
+        <h2><%= link_to event.title, event %></h2>
+        <span><%= event.location %> - <%= event.date.to_formatted_s(:short) %></span>
+        <p><%= event.short_description %></p>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+
+
+
+  <%# <%= link_to 'Show', event %>
+  <%# <%= link_to 'Edit', edit_event_path(event) %>
+  <%# <%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+
+  <!-- <br>
+
+  <%# <%= link_to 'New Event', new_event_path %> -->

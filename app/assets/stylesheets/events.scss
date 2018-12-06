@@ -1,0 +1,96 @@
+// Place all the styles related to the Events controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#events{
+  padding-top:30px;
+}
+
+.event{
+
+  padding:30px;
+
+  img{
+    width:100%;
+  }
+
+  h2{
+    font-weight:bold;
+    margin-top:10px;
+    margin-bottom:0px;
+    padding-bottom:0px;
+  }
+
+  span{
+    margin-top:0px;
+    padding-top:0px;
+    font-style:italic;
+    color:#aaa;
+    text-transform:uppercase;
+    font-weight:100;
+  }
+
+}
+
+#show-event{
+
+  padding-top:30px;
+
+  img{
+    width:100%;
+  }
+
+  h1{
+    font-weight:bold;
+    font-size:3em;
+    margin-bottom:0px;
+    padding-bottom:0px;
+  }
+
+  span{
+    margin-top:0px;
+    padding-top:0px;
+    font-size:1.5em;
+    color:#aaa;
+    font-style:italic;
+  }
+
+  p{
+    margin-top:20px;
+  }
+
+}
+
+#new-event{
+  padding-top:30px;
+
+
+  form{
+    width:100%;
+  }
+
+  label{
+    margin-bottom:0px;
+    display:block;
+  }
+
+  select{
+    background-color:#fff;
+    margin-bottom:20px;
+  }
+
+  .form-field{
+    background-color:#fff;
+    margin-bottom:20px;
+  }
+
+  .form-check{
+    display:block;
+    margin-bottom:20px;
+  }
+
+  .form-submit{
+    margin-bottom:20px;
+  }
+
+
+}

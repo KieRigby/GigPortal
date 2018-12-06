@@ -1,0 +1,67 @@
+<div class='row'>
+<%= form_for(event) do |f| %>
+  <% if event.errors.any? %>
+    <div class='col-md-12' id="error_explanation">
+      <div class='alert alert-danger animated shake'>
+        <h4><%= pluralize(event.errors.count, "error") %> <%= t('.error_explanation')%></h4>
+
+        <ul>
+        <% event.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<div class='row'>
+  <div class='col-md-12'>
+      <%= f.label t('.event-title') %>
+      <%= f.text_field :title, class:'form-control form-field', placeholder: t('.enter-title') %>
+  </div>
+</div>
+<div class='row'>
+  <div class='col-md-12'>
+    <%= f.label t('.short-description') %>
+    <%= f.text_field :short_description, class:'form-control form-field', placeholder: t('.enter-short-description') %>
+  </div>
+</div>
+<div class='row'>
+  <div class='col-md-12'>
+    <%= f.label t('.long-description') %>
+    <%= f.text_area :long_description, class:'form-control form-field', placeholder: t('.enter-long-description') %>
+  </div>
+</div>
+<div class='row'>
+  <div class='col-md-6'>
+    <%= f.label t('.location') %>
+    <%= f.text_field :location, class:'form-control form-field', placeholder: t('.enter-location') %>
+  </div>
+  <div class='col-md-6'>
+    <%= f.label t('.location-tbc') %>
+    <%= f.check_box :location_tbc, class:'form-check', checked:'' %>
+  </div>
+</div>
+<div class='row'>
+  <div class='col-md-6'>
+    <%= f.label t('.date') %>
+    <%= f.datetime_select :date, class:'form-control form-select', start_year: Time.now.year %>
+  </div>
+  <div class='col-md-6'>
+    <%= f.label t('.date-tbc') %>
+    <%= f.check_box :date_tbc, class:'form-check', checked:'' %>
+  </div>
+</div>
+<div class='row'>
+  <div class='col-md-12'>
+    <%= f.label t('.published') %>
+    <%= f.check_box :published, class:'form-check', checked:'' %>
+  </div>
+</div>
+
+
+  <div class="actions">
+    <%= f.submit class:'btn btn-primary form-submit' %>
+  </div>
+<% end %>
