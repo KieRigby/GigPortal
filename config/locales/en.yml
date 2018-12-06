@@ -51,3 +51,5 @@ en:
       title: "Events"
     show:
       get-tickets: "Get Tickets"
+    new:
+      title: "Create an Event"
