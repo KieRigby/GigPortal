@@ -1,6 +1,12 @@
-<h1>Editing Event</h1>
+<div class='container' id='new-event'>
+  <div class='row'>
+    <div class='col-md-12'><h1><%= t('.title')%></h1></div>
+  </div>
+
 
 <%= render 'form', event: @event %>
+    <!-- <div class='action'> -->
+      <%# <%= link_to 'Show', @event, class:"btn btn-success" %> 
+    <!-- </div> -->
 
-<%= link_to 'Show', @event %> |
-<%= link_to 'Back', events_path %>
+</div>

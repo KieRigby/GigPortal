@@ -1,7 +1,9 @@
 <div class='container' id='show-event'>
   <div class='row'>
     <div class='col-md-12'>
-      <p id="notice"><%= notice %></p>
+      <% if !notice.blank? %>
+        <div class='alert alert-success animated fadeInUp'><%= notice %></div>
+      <% end %>
     </div>
   </div>
   <div class='row'>

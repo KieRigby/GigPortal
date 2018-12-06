@@ -3,7 +3,7 @@
   <% if event.errors.any? %>
     <div class='col-md-12' id="error_explanation">
       <div class='alert alert-danger animated shake'>
-        <h4><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h4>
+        <h4><%= pluralize(event.errors.count, "error") %> <%= t('.error_explanation')%></h4>
 
         <ul>
         <% event.errors.full_messages.each do |message| %>

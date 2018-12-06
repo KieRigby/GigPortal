@@ -53,7 +53,10 @@ en:
       get-tickets: "Get Tickets"
     new:
       title: "Create an Event"
+    edit:
+      title: "Edit your Event"
     form:
+      error_explanation: "prevented this event from being saved:"
       event-title: "Title/Name:"
       enter-title: "Enter the name or title of your event"
       short-description: "Short Description:"
