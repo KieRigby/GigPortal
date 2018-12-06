@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181204074402) do
+ActiveRecord::Schema.define(version: 20181206112814) do
 
   create_table "events", force: :cascade do |t|
     t.string   "title",                             null: false
@@ -23,6 +23,16 @@ ActiveRecord::Schema.define(version: 20181204074402) do
     t.boolean  "published",         default: false, null: false
     t.datetime "created_at",                        null: false
     t.datetime "updated_at",                        null: false
+  end
+
+  create_table "tickets", force: :cascade do |t|
+    t.string   "ticket_hash"
+    t.integer  "event_id"
+    t.boolean  "scanned"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["event_id"], name: "index_tickets_on_event_id"
+    t.index ["ticket_hash"], name: "index_tickets_on_ticket_hash", unique: true
   end
 
 end

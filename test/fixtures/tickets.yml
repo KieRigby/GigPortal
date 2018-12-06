@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ticket_hash: MyString
+  event: one
+  scanned: false
+
+two:
+  ticket_hash: MyString
+  event: two
+  scanned: false
