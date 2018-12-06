@@ -53,3 +53,16 @@ en:
       get-tickets: "Get Tickets"
     new:
       title: "Create an Event"
+    form:
+      event-title: "Title/Name:"
+      enter-title: "Enter the name or title of your event"
+      short-description: "Short Description:"
+      enter-short-description: "Enter a short description for your event"
+      long-description: "Long Description:"
+      enter-long-description: "Enter a long description for your event"
+      location: "Location:"
+      enter-location: "Where is your event?"
+      location-tbc: "Is the location to be confirmed?"
+      date: "Date & Time:"
+      date-tbc: "Is the date to be confirmed?"
+      published: "Do you want this event to be published now?"

@@ -63,7 +63,34 @@
 #new-event{
   padding-top:30px;
 
+
   form{
     width:100%;
   }
+
+  label{
+    margin-bottom:0px;
+    display:block;
+  }
+
+  select{
+    background-color:#fff;
+    margin-bottom:20px;
+  }
+
+  .form-field{
+    background-color:#fff;
+    margin-bottom:20px;
+  }
+
+  .form-check{
+    display:block;
+    margin-bottom:20px;
+  }
+
+  .form-submit{
+    margin-bottom:20px;
+  }
+
+
 }
