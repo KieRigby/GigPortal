@@ -46,7 +46,11 @@ body{
   padding-top:65px;
 }
 
- nav{
+.wrapper{
+  min-height:75vh;
+}
+
+nav{
    background-color:$primary-color;
    border-radius:0 !important;
    border-bottom: 1px solid darken($blue, 10);
@@ -60,8 +64,11 @@ body{
  }
 
  footer{
-   background-color:$white;
-   border-top:3px solid $blue;
+   background-color:$blue;
+   border-top:3px solid darken($blue,5);
+   position:relative;
+   bottom:0;
+   width:100%;
 
    .container{
      padding:20px;
@@ -69,14 +76,14 @@ body{
 
    .copyright{
      font-size:1em;
-     color:$gray-700;
+     color:$white;
      text-align:right;
    }
 
    .footer-brand{
      font-family: $GP_FONT;
      font-size:1em;
-     color:$gray-500;
+     color:$white;
      text-align:center;
    }
 
