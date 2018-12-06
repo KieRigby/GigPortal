@@ -6,6 +6,8 @@ class Event < ApplicationRecord
   validate :event_date_cannot_be_in_past, on: :create
   validate :location_must_be_present_or_tbc, on: :create
 
+  has_many :tickets, dependent: :destroy
+
   scope :published, -> {where(published:true)}
 
   def event_date_cannot_be_in_past
