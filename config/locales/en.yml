@@ -25,8 +25,8 @@ en:
 
   header:
     nav:
-      home: "HOME"
-      contact: "CONTACT"
+      home: "Home"
+      contact: "Contact"
 
   home:
     contact:
