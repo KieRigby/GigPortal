@@ -5,4 +5,7 @@ class Ticket < ApplicationRecord
   validates :scanned, presence: true
 
   belongs_to :event
+
+  scope :scanned, -> {where(scanned:true)}
+  scope :unscanned, -> {where(scanned:false)}
 end
