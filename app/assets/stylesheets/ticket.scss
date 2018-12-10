@@ -25,6 +25,10 @@
 #get-ticket{
   padding-top:30px;
 
+  .ticket-for{
+    margin-bottom:20px;
+  }
+
   h3{
     margin-bottom:0px;
   }
@@ -33,5 +37,25 @@
     margin-top:0px;
     color:#aaa;
     font-style:italic;
+  }
+
+  form label{
+    margin-bottom:0px;
+  }
+
+  form input[type=text],form input[type=email], form input[type=tel]{
+    display:block;
+    margin-bottom:20px;
+    background-color:#fff;
+  }
+  form input[type=submit]{
+    margin-top:15px;
+    margin-bottom:20px;
+    float:right;
+  }
+  form input[type=number]{
+    background-color:#fff;
+    display:block;
+    margin-bottom:20px;
   }
 }

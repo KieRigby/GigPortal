@@ -1,6 +1,6 @@
 <div class='container' id='get-ticket'>
   <div class='row'>
-    <div class='col-md-12'>
+    <div class='col-md-12 ticket-for'>
       <h1><%= t('.title') %></h1>
       <h3><%= @event.title %></h3>
       <span><%= @event.location %> - <%= @event.date.to_formatted_s(:short) %></span>
@@ -10,6 +10,31 @@
   <div class='row'>
     <div class='col-md-12'>
       <%= render 'shared/flash' %>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-md-6'>
+      <%= label_tag :first_name, t('.first-name') %>
+      <%= text_field_tag :first_name, '', title: t('.enter-first-name'), size: 50, class: 'form-control', placeholder: t('.enter-first-name') %>
+    </div>
+    <div class='col-md-6'>
+      <%= label_tag :last_name, t('.last-name') %>
+      <%= text_field_tag :last_name, '', title: t('.enter-last-name'), size: 50, class: 'form-control', placeholder: t('.enter-last-name') %>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-md-8'>
+      <%= label_tag :email, t('.email') %>
+      <%= text_field_tag :email, '', title: t('.enter-email'), size: 50, class: 'form-control', placeholder: t('.enter-email') %>
+    </div>
+    <div class='col-md-4'>
+      <%= label_tag :quantity, t('.quantity') %>
+      <%= number_field_tag :quantity, 1, in: 1..5, class: 'form-control' %>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-md-12'>
+      <%= submit_tag(t('.submit'), class:'btn btn-primary') %>
     </div>
   </div>
 
