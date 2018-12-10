@@ -1,0 +1,58 @@
+<div class='container' id='get-ticket'>
+  <div class='row'>
+    <div class='col-md-12 ticket-for'>
+      <h1><%= t('.title') %></h1>
+      <h3><%= @event.title %></h3>
+      <span><%= @event.location %> - <%= @event.date.to_formatted_s(:short) %></span>
+    </div>
+  </div>
+  <%= form_for @ticket ,:url => event_tickets_path, class: 'form-group' do |f| %>
+  <div class='row'>
+    <% if @ticket.errors.any? %>
+      <div class='col-md-12' id="error_explanation">
+        <div class='alert alert-danger animated shake'>
+          <h4><%= pluralize(@ticket.errors.count, "error") %> <%= t('.error_explanation')%></h4>
+
+          <ul>
+          <% @ticket.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class='row'>
+    <div class='col-md-12'>
+      <%= render 'shared/flash' %>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-md-6'>
+      <%= f.label :first_name, t('.first-name') %>
+      <%= f.text_field :first_name, class: 'form-control', placeholder: t('.enter-first-name') %>
+    </div>
+    <div class='col-md-6'>
+      <%= f.label :last_name, t('.last-name') %>
+      <%= f.text_field :last_name, class: 'form-control', placeholder: t('.enter-last-name') %>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-md-8'>
+      <%= f.label :email, t('.email') %>
+      <%= f.text_field :email, class: 'form-control', placeholder: t('.enter-email') %>
+    </div>
+    <div class='col-md-4'>
+      <%= label_tag 'quantity', t('.quantity') %>
+      <%= number_field_tag 'quantity', 1, max: 5, min: 1, class: 'form-control' %>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-md-12'>
+      <%= hidden_field_tag :event_id, @event.id %>
+      <%= f.submit t('.submit'), class:'btn btn-primary' %>
+    </div>
+  </div>
+
+  <% end %>
+</div>

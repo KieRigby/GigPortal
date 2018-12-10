@@ -14,7 +14,9 @@
       <h1><%= @event.title %></h1>
       <span><%= @event.location %> - <%= @event.date.to_formatted_s(:short) %></span>
       <p><%= @event.long_description %></p>
-      <button type='button' class='btn btn-success'><%= fa_icon "ticket", text: t('.get-tickets') %></button>
+      <%= link_to ticket_path(@event.id) do %>
+        <button type='button' class='btn btn-success'><%= fa_icon "ticket", text: t('.get-tickets') %></button>
+      <% end %>
     </div>
   </div>
 </div>

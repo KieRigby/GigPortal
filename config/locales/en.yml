@@ -70,8 +70,8 @@ en:
       date-tbc: "Is the date to be confirmed?"
       published: "Do you want this event to be published now?"
 
-  ticket:
-    get:
+  tickets:
+    new:
       title: "Buy tickets"
       first-name: "First Name:"
       enter-first-name: "Enter your first name"
@@ -81,3 +81,4 @@ en:
       enter-email: "The tickets will be sent to this email address"
       quantity: 'Number of Tickets:'
       submit: 'Get tickets'
+      error_explanation: "prevented us from getting you tickets"

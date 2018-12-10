@@ -29,11 +29,11 @@ ActiveRecord::Schema.define(version: 20181209234301) do
     t.string   "ticket_hash"
     t.integer  "event_id"
     t.boolean  "scanned"
-    t.datetime "created_at",                                  null: false
-    t.datetime "updated_at",                                  null: false
-    t.string   "first_name",  default: "Kieran",              null: false
-    t.string   "last_name",   default: "Rigby",               null: false
-    t.string   "email",       default: "kieran@kierigby.com", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "first_name",  null: false
+    t.string   "last_name",   null: false
+    t.string   "email",       null: false
     t.index ["event_id"], name: "index_tickets_on_event_id"
     t.index ["ticket_hash"], name: "index_tickets_on_ticket_hash", unique: true
   end

@@ -9,9 +9,12 @@ Rails.application.routes.draw do
   #Events CRUD routes
   resources :events
 
+  resources :events do
+    resources :tickets, only: [:new,:create]
+  end
   #Ticket routes
-  get 'tickets/get/:event_id', to: 'ticket#get'
-  post 'request_ticket', to: 'ticket#request_ticket'
+  # get 'tickets/get/:id', to: 'tickets#index'
+  # post 'request_tickets', to: 'ticket#create'
 
 
 
