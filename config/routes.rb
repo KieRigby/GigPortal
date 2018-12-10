@@ -9,12 +9,17 @@ Rails.application.routes.draw do
   #Events CRUD routes
   resources :events
 
+  #Nested resource routes for /event/:id/tickets/new
   resources :events do
     resources :tickets, only: [:new,:create]
   end
-  #Ticket routes
-  # get 'tickets/get/:id', to: 'tickets#index'
-  # post 'request_tickets', to: 'ticket#create'
+
+  #Extra ticket routes
+  #For QR Code scanning:
+  #get 'tickets/scan/', to: 'tickets#scan'
+  #View tickets
+  #resources :tickets, only: [:show]
+
 
 
 

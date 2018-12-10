@@ -1,5 +1,16 @@
+require 'rqrcode'
+
 class TicketsController < ApplicationController
-  before_action :set_event
+  before_action :set_event, only: [:create,:new]
+  #before_action :set_ticket, only: [:show]
+
+  # A few routes which may come in handy in a future date for QR code tickets and user accounts
+  # def show
+  #   @qrcode = RQRCode::QRCode.new(@ticket.ticket_hash,:size => 5, :level => :h )
+  # end
+  #
+  # def scan
+  # end
 
   def new
     @ticket = Ticket.new
@@ -24,6 +35,10 @@ class TicketsController < ApplicationController
   private
     def set_event
       @event = Event.find(params[:event_id])
+    end
+
+    def set_ticket
+      @ticket = Ticket.find(params[:id])
     end
 
     def ticket_params
