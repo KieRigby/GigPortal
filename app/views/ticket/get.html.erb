@@ -1,0 +1,17 @@
+<div class='container' id='get-ticket'>
+  <div class='row'>
+    <div class='col-md-12'>
+      <h1><%= t('.title') %></h1>
+      <h3><%= @event.title %></h3>
+      <span><%= @event.location %> - <%= @event.date.to_formatted_s(:short) %></span>
+    </div>
+  </div>
+  <%= form_tag request_ticket_path, method: 'post',class: 'form-group' do %>
+  <div class='row'>
+    <div class='col-md-12'>
+      <%= render 'shared/flash' %>
+    </div>
+  </div>
+
+  <% end %>
+</div>

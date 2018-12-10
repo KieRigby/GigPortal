@@ -69,3 +69,7 @@ en:
       date: "Date & Time:"
       date-tbc: "Is the date to be confirmed?"
       published: "Do you want this event to be published now?"
+
+  ticket:
+    get:
+      title: "Buy tickets"
