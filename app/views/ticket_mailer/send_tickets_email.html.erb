@@ -22,6 +22,10 @@
         margin-bottom:5px;
         margin-top:10px;
       }
+      h3{
+        margin-top:0px;
+        margin-bottom:0px;
+      }
       p{
         margin-top:5px;
       }
@@ -127,31 +131,38 @@
       <div class='row'>
         <h2><%= t('.your-ticket')%></h2>
       </div>
+      <%= @tickets.length.times do |i| %>
+      <div class='row'>
+        <div class='col-md-12'>
+          <h3><%= t('.ticket') %><%= i + 1 %></h3>
+        </div>
+      </div>
       <div class='row'>
         <dl>
           <div class='col-md-3'>
             <dt><%= t('.name') %></dt>
-            <dd><%= @first_name %> <%= @last_name %></dd>
+            <dd><%= @tickets[i].first_name %> <%= @tickets[i].last_name %></dd>
           </div>
           <div class='col-md-3'>
             <dt><%= t('.email') %></dt>
-            <dd><%= @email %></dd>
+            <dd><%= @tickets[i].email %></dd>
           </div>
           <div class='col-md-3'>
             <dt><%= t('.ticket-code') %></dt>
-            <dd><%= @ticket_hash %></dd>
+            <dd><%= @hashes[i] %></dd>
           </div>
           <div class='col-md-3'>
             <dt><%= t('.event') %></dt>
-            <dd><%= @event.title %></dd>
+            <dd><%= @tickets[i].event.title %></dd>
           </div>
           </dl>
         </div>
         <div class='row'>
           <div class='col-md-12'>
-            <%= raw @qr.as_html %>
+            <%= raw @qrs[i].as_html %>
           </div>
         </div>
+        <% end %>
       </div>
 
     <div class='container-fluid footer'>

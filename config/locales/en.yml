@@ -99,6 +99,7 @@ en:
       error_explanation: "prevented us from getting you tickets"
 
       tickets-sent: "Your tickets have been obtained, we have sent them to your email address."
+      invalid-quantity: "Quantity must be between 1 and 5"
 
   ticket_mailer:
     send_tickets_email:
@@ -109,8 +110,9 @@ en:
       your-tickets-for: "Here are your tickets for "
       information: ". Please remember to bring this email along with you to the event to gain admission!"
       event-details: "Event Details:"
-      your-ticket: "Your Ticket:"
+      your-ticket: "Your Tickets:"
       name: "Name:"
       email: "Email:"
       ticket-code: "Ticket Code:"
       event: "Event:"
+      ticket: "Ticket "

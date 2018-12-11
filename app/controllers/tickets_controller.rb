@@ -17,18 +17,41 @@ class TicketsController < ApplicationController
   end
 
   def create
-    @ticket = Ticket.new(ticket_params)
-    @ticket.ticket_hash = SecureRandom.uuid
-    @ticket.event = @event
+    tickets = []
+    errors = []
+    @quantity = params[:quantity].to_i
+    #Check quantity is in range
+    if @quantity > 0 && @quantity < 6 then
+      #for each quantity
+      @quantity.times do |i|
+        #try and save the ticket
+        @ticket = Ticket.new(ticket_params)
+        @ticket.event = @event
+        @ticket.ticket_hash = SecureRandom.uuid
+        if @ticket.save
+          tickets.push(@ticket)
+        else
+          errors.push(@ticket.errors)
+        end
+      end
+    else
+      flash[:alert] = I18n.t('tickets.new.invalid-quantity')
+      redirect_to new_event_ticket_path(@event)
+    end
+
+
+    #if there is an error then add it to the list of errors
+    #if not then add the ticket to the array
+    #respond
 
     respond_to do |format|
-      if @ticket.save
-        TicketMailer.send_tickets_email(@ticket.first_name, @ticket.last_name, @ticket.event.id, @ticket.ticket_hash, @ticket.email).deliver_now
-        format.html { redirect_to new_event_ticket_path, notice: I18n.t('tickets.new.tickets-sent') }
+      if errors.empty?
+        TicketMailer.send_tickets_email(tickets).deliver_now
+        format.html { redirect_to @event, notice: I18n.t('tickets.new.tickets-sent') }
         format.json { render :show, status: :created, location: new_event_ticket_path }
       else
         format.html { render :new }
-        format.json { render json: @ticket.errors, status: :unprocessable_entity }
+        format.json { render json: errors[0].errors, status: :unprocessable_entity }
       end
     end
   end
