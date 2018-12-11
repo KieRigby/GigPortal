@@ -1,21 +1,21 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  short_description: MyString
-  long_description: MyText
-  location: MyString
+event_one:
+  title: Event1
+  short_description: "Welcome to Event1"
+  long_description: "This is a longer description of event1"
+  location: "location1"
   location_tbc: false
-  date: 2018-12-04 07:44:02
+  date: <%= DateTime.now %>
   date_tbc: false
   published: false
 
-two:
-  title: MyString
-  short_description: MyString
-  long_description: MyText
-  location: MyString
+event_two:
+  title: Event2
+  short_description: Welcome to Event2
+  long_description: This is a longer description of event2
+  location: location2
   location_tbc: false
-  date: 2018-12-04 07:44:02
+  date: <%= DateTime.now %>
   date_tbc: false
   published: false

@@ -2,7 +2,6 @@ class Event < ApplicationRecord
   validates :title, presence: true
   validates :short_description, presence: true
   validates :long_description, presence: true
-  validates :published, presence: true
   validate :event_date_cannot_be_in_past, on: :create
   validate :location_must_be_present_or_tbc, on: :create
 
