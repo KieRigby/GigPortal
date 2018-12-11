@@ -6,9 +6,11 @@ class Event < ApplicationRecord
   validate :location_must_be_present_or_tbc, on: :create
 
   has_many :tickets, dependent: :destroy
+  belongs_to :promoter
 
   scope :published, -> {where(published:true)}
   scope :future, -> {where("date > ?", DateTime.now)}
+  scope :promoter_events, -> (promoter) {where('promoter_id = ?',promoter.id)}
 
   def event_date_cannot_be_in_past
     if date.present? && date < Date.today

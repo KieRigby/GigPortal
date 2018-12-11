@@ -5,18 +5,20 @@
     <% if !notice.blank? %>
       <div class='alert alert-success animated fadeInUp'><%= notice %></div>
     <% end %>
-  </div>
-  <div class='row'>
-    <% @events.each do |event| %>
-    <div class='col-md-4'>
-      <div class='event'>
-        <img src='https://placeimg.com/500/500/people' alt='<%= event.title %>'>
-        <h2><%= link_to event.title, event %></h2>
-        <span><%= event.location_tbc ? I18n.t('events.index.location-tbc') : event.location %> - <%= event.date_tbc ? I18n.t('events.index.date-tbc') : event.date.to_formatted_s(:long_ordinal) %></span>
-        <p><%= event.short_description %></p>
-      </div>
     </div>
-    <% end %>
+  </div>
+    <div class='row'>
+      <% @events.each do |event| %>
+      <div class='col-md-4'>
+        <div class='event'>
+          <img src='https://placeimg.com/500/500/people' alt='<%= event.title %>'>
+          <h2><%= link_to event.title, event %></h2>
+          <span><%= event.location_tbc ? I18n.t('events.index.location-tbc') : event.location %> - <%= event.date_tbc ? I18n.t('events.index.date-tbc') : event.date.to_formatted_s(:long_ordinal) %></span>
+          <p><%= event.short_description %></p>
+        </div>
+      </div>
+      <% end %>
+    </div>
   </div>
 </div>
 

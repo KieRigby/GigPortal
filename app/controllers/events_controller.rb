@@ -1,5 +1,6 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_promoter!, only: [:create, :edit, :update, :destroy]
 
   # GET /events
   # GET /events.json
@@ -25,6 +26,7 @@ class EventsController < ApplicationController
   # POST /events.json
   def create
     @event = Event.new(event_params)
+    @event.promoter = current_promoter
 
     respond_to do |format|
       if @event.save
