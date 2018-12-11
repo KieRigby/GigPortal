@@ -98,7 +98,7 @@ en:
       submit: 'Get tickets'
       error_explanation: "prevented us from getting you tickets"
 
-      tickets_sent: "Your tickets have been obtained, we have sent them to your email address"
+      tickets-sent: "Your tickets have been obtained, we have sent them to your email address."
 
   ticket_mailer:
     send_tickets_email:
