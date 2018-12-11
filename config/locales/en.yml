@@ -28,6 +28,7 @@ en:
       home: "Home"
       events: "Events"
       contact: "Contact"
+      profile: "Profile"
 
   home:
     contact:

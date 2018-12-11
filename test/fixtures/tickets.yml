@@ -9,7 +9,7 @@ one:
   email: kieran@kierigby.com
 
 two:
-  ticket_hash: MyString
+  ticket_hash: ticket-hash-2
   event: two
   scanned: false
   first_name: John

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :promoters
   #Root view to the home controller home action
   root 'home#home'
   #Contact routes

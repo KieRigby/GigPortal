@@ -15,6 +15,22 @@
       <li class="nav-item">
         <%= link_to t('header.nav.contact'), contact_path, class: 'nav-link' %>
       </li>
+      <% if promoter_signed_in? %>
+      <li class="nav-item">
+        <%= link_to t('header.nav.profile'), edit_promoter_registration_path, class: 'nav-link' %>
+      </li>
+      <li class="nav-item">
+        <%= link_to t('header.nav.logout'), destroy_promoter_session_path, method: 'delete', class: 'nav-link' %>
+      </li>
+      <% else %>
+      <li class="nav-item">
+        <%= link_to t('header.nav.login'), new_promoter_session_path, class: 'nav-link' %>
+      </li>
+      <li class="nav-item">
+        <%= link_to t('header.nav.register'), new_promoter_registration_path, class: 'nav-link' %>
+      </li>
+      <% end %>
+
     </ul>
   </div>
 </nav>
