@@ -122,3 +122,27 @@ en:
       ticket-code: "Ticket Code:"
       event: "Event:"
       ticket: "Ticket "
+
+  devise:
+    sessions:
+      new:
+        title: "Log in"
+        enter-email: "Enter your email address"
+        enter-password: "Enter your password"
+        submit: "Log in"
+    registrations:
+      new:
+        title: "Create an Account"
+        enter-email: "Enter your email address"
+        enter-password: "Choose a password"
+        confirm-password: "Confirm your password"
+        submit: "Register"
+      edit:
+        edit-title: "Edit Account"
+        awaiting-confirmation: "Currently awaiting confirmation for: "
+        password-info: "Leave blank if you don't want to change your password"
+        confirm-password: "Confirm new password"
+        current-password: "We need your current password to confirm your changes"
+        submit: "Save Changes"
+        cancel-title: "Delete Account"
+        confirm-delete: "Are you sure you want to delete your account?"

@@ -70,6 +70,55 @@ h1,h2,h3,h4,h5,h6{
    }
  }
 
+ #login{
+   padding-top:30px;
+
+   label{
+     margin-bottom:0px;
+     display:block;
+   }
+
+   .form-field{
+     background-color:#fff;
+     margin-bottom:20px;
+   }
+
+   .remember{
+     display:inline;
+     margin-bottom:20px;
+   }
+ }
+
+ #register{
+   padding-top:30px;
+
+   #error_explanation{
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+  }
+
+
+   label{
+     margin-bottom:0px;
+     display:block;
+   }
+
+   .form-field{
+     background-color:#fff;
+     margin-bottom:20px;
+   }
+
+   .form-submit{
+     margin-bottom:20px;
+   }
+
+ }
+
  footer{
    background-color:$blue;
    border-top:3px solid darken($blue,5);

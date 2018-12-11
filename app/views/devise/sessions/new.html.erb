@@ -1,0 +1,44 @@
+<div class='container' id='login'>
+  <div class='row'>
+    <div class='col-md-12'>
+      <h1><%= t('.title') %></h1>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-md-12'>
+      <%= render 'shared/flash' %>
+    </div>
+  </div>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name), class: 'form-group') do |f| %>
+  <div class='row'>
+    <div class="col-md-12">
+      <%= f.label :email %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control form-field', placeholder: t('.enter-email') %>
+    </div>
+  </div>
+  <div class='row'>
+    <div class="col-md-12">
+      <%= f.label :password %>
+      <%= f.password_field :password, autocomplete: "current-password", class: 'form-control form-field', placeholder: t('.enter-password') %>
+    </div>
+  </div>
+  <div class='row'>
+    <% if devise_mapping.rememberable? -%>
+      <div class="col-md-12">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me, class:'remember' %>
+      </div>
+    <% end -%>
+  </div>
+  <div class='row'>
+    <div class="col-md-12">
+      <%= f.submit t('.submit'), class:'btn btn-primary' %>
+    </div>
+  <% end %>
+  </div>
+  <div class='row'>
+    <div class='col-md-12'>
+      <%= render "devise/shared/links" %>
+    </div>
+  </div>
+</div>
