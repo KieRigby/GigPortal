@@ -46,6 +46,15 @@ en:
       no-email: "Please provide us with an email to contact you on."
       email-sent: "Thanks! Your message has been sent and we will aim to get back to you within 24 hours."
 
+  contact_mailer:
+    contact_email:
+      greeting: "Dear"
+      get-in-touch: "Could you please get in touch with me please?"
+      name: "Name:"
+      email: "Email:"
+      telephone: "Telephone:"
+      thanks: "Thanks,"
+
   events:
     index:
       title: "Events"
@@ -82,3 +91,18 @@ en:
       quantity: 'Number of Tickets:'
       submit: 'Get tickets'
       error_explanation: "prevented us from getting you tickets"
+
+  ticket_mailer:
+    send_tickets_email:
+      subject: "Your tickets for "
+      heading-1: "Your tickets for "
+      heading-2: " have arrived!"
+      greeting: "Hello "
+      your-tickets-for: "Here are your tickets for "
+      information: ". Please remember to bring this email along with you to the event to gain admission!"
+      event-details: "Event Details:"
+      your-ticket: "Your Ticket:"
+      name: "Name:"
+      email: "Email:"
+      ticket-code: "Ticket Code:"
+      event: "Event:"

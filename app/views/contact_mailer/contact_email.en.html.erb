@@ -1,20 +1,20 @@
 <div class='container'>
   <p>
-    <%= "Dear #{t('.app-title')}," %>
-    Could you get in contact with me please?
+    <%= t('.greeting') %> <%="#{t('app-title')}," %>
+    <%= t('.get-in-touch') %>
   </p>
 
   <dl>
-    <dt>Name:</dt>
+    <dt><%= t('.name') %></dt>
     <dd><%= @name %></dd>
-    <dt>Email:</dt>
+    <dt><%= t('.email') %></dt>
     <dd><%= @email %></dd>
-    <dt>Telephone:</dt>
+    <dt><%= t('.telephone') %></dt>
     <dd><%= @telephone %></dd>
   </dl>
 
   <p><%= @message %></p>
 
-  <p>Thanks,</p>
+  <p><%= t('.thanks') %></p>
   <p><%= @name %></p>
 </div>

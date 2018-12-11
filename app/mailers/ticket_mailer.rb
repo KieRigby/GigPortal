@@ -11,6 +11,6 @@ class TicketMailer < ApplicationMailer
     @ticket_hash = ticket_hash
     @qr = RQRCode::QRCode.new( @ticket_hash, :size => 4, :level => :h )
 
-    mail(to: @email, subject: "Your tickets to #{ @event.title }!")
+    mail(to: @email, subject: I18n.t('ticket_mailer.send_tickets_email.subject') + @event.title)
   end
 end

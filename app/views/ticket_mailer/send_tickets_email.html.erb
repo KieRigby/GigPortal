@@ -103,16 +103,16 @@
     <div class='container'>
       <div class='row'>
         <div class='col-md-12'>
-          <h1>Your tickets for <%= @event.title %> have arrived!</h1>
+          <h1><%= t('.heading-1') %><%= @event.title %> <%= t('.heading-2')%></h1>
         </div>
       </div>
       <div class='row'>
         <div class='col-md-12'>
-          <p><b>Hi <%= @first_name %></b>,<br> Here are your tickets for <%= @event.title %>. Please remember to bring this email along with you to the event to gain admission!</p>
+          <p><b><%= t('.greeting') %> <%= @first_name %></b>,<br> <%= t('.your-tickets-for') %><%= @event.title %><%= t('.information')%></p>
         </div>
       </div>
       <div class='row'>
-        <h2>Event Details:</h2>
+        <h2><%= t('.event-details')%></h2>
       </div>
       <div class='row'>
         <div class='col-md-4'>
@@ -125,24 +125,24 @@
         </div>
       </div>
       <div class='row'>
-        <h2>Your Ticket:</h2>
+        <h2><%= t('.your-ticket')%></h2>
       </div>
       <div class='row'>
         <dl>
           <div class='col-md-3'>
-            <dt>Name:</dt>
+            <dt><%= t('.name') %></dt>
             <dd><%= @first_name %> <%= @last_name %></dd>
           </div>
           <div class='col-md-3'>
-            <dt>Email:</dt>
+            <dt><%= t('.email') %></dt>
             <dd><%= @email %></dd>
           </div>
           <div class='col-md-3'>
-            <dt>Ticket Code:</dt>
+            <dt><%= t('.ticket-code') %></dt>
             <dd><%= @ticket_hash %></dd>
           </div>
           <div class='col-md-3'>
-            <dt>Event:</dt>
+            <dt><%= t('.event') %></dt>
             <dd><%= @event.title %></dd>
           </div>
           </dl>
