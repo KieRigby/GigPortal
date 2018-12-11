@@ -5,6 +5,10 @@ class EventTest < ActiveSupport::TestCase
   #   assert true
   # end
 
+  setup do
+    @promoter = promoters(:one)
+  end
+
   test "should not save empty event" do
     event = Event.new
 
@@ -21,6 +25,7 @@ class EventTest < ActiveSupport::TestCase
     event.location_tbc = true
     event.date_tbc = true
     event.published = true
+    event.promoter = @promoter
 
     event.save
     assert event.valid?
@@ -34,6 +39,7 @@ class EventTest < ActiveSupport::TestCase
     event.location_tbc = true
     event.date_tbc = true
     event.published = true
+    event.promoter = @promoter
 
     event.save
     refute event.valid?
@@ -47,6 +53,7 @@ class EventTest < ActiveSupport::TestCase
     event.location_tbc = true
     event.date_tbc = true
     event.published = true
+    event.promoter = @promoter
 
     event.save
     refute event.valid?
@@ -60,6 +67,7 @@ class EventTest < ActiveSupport::TestCase
     event.location_tbc = true
     event.date_tbc = true
     event.published = true
+    event.promoter = @promoter
 
     event.save
     refute event.valid?
@@ -74,6 +82,7 @@ class EventTest < ActiveSupport::TestCase
     event.location_tbc = false
     event.date_tbc = true
     event.published = true
+    event.promoter = @promoter
 
     event.save
     refute event.valid?
@@ -89,6 +98,7 @@ class EventTest < ActiveSupport::TestCase
     event.date = DateTime.now - 10.days
     event.date_tbc = true
     event.published = true
+    event.promoter = @promoter
 
     event.save
     refute event.valid?

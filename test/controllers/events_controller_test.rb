@@ -1,8 +1,12 @@
 require 'test_helper'
 
 class EventsControllerTest < ActionDispatch::IntegrationTest
+  include Devise::Test::IntegrationHelpers
+
   setup do
     @event = events(:event_one)
+    @promoter = promoters(:one)
+    sign_in @promoter
   end
 
   test "should get index" do

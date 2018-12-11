@@ -1,6 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 event_one:
+  promoter: one
   title: Event1
   short_description: "Welcome to Event1"
   long_description: "This is a longer description of event1"
@@ -11,6 +12,7 @@ event_one:
   published: false
 
 event_two:
+  promoter: two
   title: Event2
   short_description: Welcome to Event2
   long_description: This is a longer description of event2
