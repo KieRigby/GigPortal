@@ -20,6 +20,17 @@ td {
 td.black { border-color: #000; }
 td.white { border-color: #fff; }
 
+#index{
+  padding-top:30px;
+
+  .ticket-table{
+    td{
+      border-left:1px solid #ccc;
+      border-right:1px solid #ccc;
+    }
+  }
+}
+
 #get-ticket{
   padding-top:30px;
 

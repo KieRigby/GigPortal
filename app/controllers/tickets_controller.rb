@@ -1,7 +1,9 @@
 require 'rqrcode'
 
 class TicketsController < ApplicationController
-  before_action :set_event, only: [:create,:new]
+  before_action :set_event, only: [:index,:create,:new, :scan,:unscan]
+  before_action :set_ticket, only: [:scan,:unscan]
+  before_action :authenticate_promoter!, only: [:index, :scan, :unscan]
   #before_action :set_ticket, only: [:show]
 
   # A few routes which may come in handy in a future date for QR code tickets and user accounts
@@ -12,8 +14,31 @@ class TicketsController < ApplicationController
   # def scan
   # end
 
+  def index
+    @unscanned = Ticket.unscanned.events_ticket(@event)
+    @scanned = Ticket.scanned.events_ticket(@event)
+  end
+
   def new
     @ticket = Ticket.new
+  end
+
+  def scan
+    @ticket.scanned = true
+    @ticket.save
+    respond_to do |format|
+      format.html { redirect_to event_tickets_path(@event.id), notice: I18n.t('tickets.scan.ticket-scanned') }
+      format.json { head :no_content }
+    end
+  end
+
+  def unscan
+    @ticket.scanned = false
+    @ticket.save
+    respond_to do |format|
+      format.html { redirect_to event_tickets_path(@event.id), alert: I18n.t('tickets.unscan.ticket-unscanned') }
+      format.json { head :no_content }
+    end
   end
 
   def create

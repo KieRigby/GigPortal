@@ -1,0 +1,68 @@
+<div class='container' id='index'>
+  <div class='row'>
+    <div class='col-md-12'>
+      <h1><%= t('.title') %><span class='badge badge-secondary'><%= @event.title %></span></h1>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-md-12'>
+      <%= render 'shared/flash' %>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-md-6'>
+      <h3><%= t('.unscanned')%> <span class='badge badge-danger'><%= @unscanned.length %></span></h3>
+      <div class='table-responsive'>
+        <table class='table table-striped ticket-table'>
+          <thead>
+            <tr>
+              <th><%= t('.scan-heading')%></th>
+              <th><%= t('.first-name-heading')%></th>
+              <th><%= t('.last-name-heading')%></th>
+              <th><%= t('.email-heading')%></th>
+              <th><%= t('.hash-heading')%></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @unscanned.each do |ticket| %>
+              <tr>
+                <td><%= link_to t('.scan'), controller: 'tickets', action: 'scan', id:ticket, event_id: @event.id %></td>
+                <td><%= ticket.first_name %></td>
+                <td><%= ticket.last_name %></td>
+                <td><%= ticket.email %></td>
+                <td><%= ticket.ticket_hash %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class='col-md-6'>
+      <h3><%= t('.scanned')%> <span class='badge badge-success'><%= @scanned.length %></span></h3>
+      <div class='table-responsive'>
+        <table class='table table-striped ticket-table'>
+          <thead>
+            <tr>
+              <th><%= t('.unscan-heading')%></th>
+              <th><%= t('.first-name-heading')%></th>
+              <th><%= t('.last-name-heading')%></th>
+              <th><%= t('.email-heading')%></th>
+              <th><%= t('.hash-heading')%></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @scanned.each do |ticket| %>
+              <tr>
+                <td><%= link_to t('.unscan'), controller: 'tickets', action: 'unscan', id:ticket, event_id: @event.id %></td>
+                <td><%= ticket.first_name %></td>
+                <td><%= ticket.last_name %></td>
+                <td><%= ticket.email %></td>
+                <td><%= ticket.ticket_hash %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

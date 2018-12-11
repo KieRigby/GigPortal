@@ -13,4 +13,5 @@ class Ticket < ApplicationRecord
   #Scopes
   scope :scanned, -> {where(scanned:true)}
   scope :unscanned, -> {where(scanned:false)}
+  scope :events_ticket, -> (event) {where('event_id = ?',event.id)}
 end

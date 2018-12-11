@@ -69,6 +69,9 @@ en:
       date-tbc: "Date TBC"
     show:
       get-tickets: "Get Tickets"
+      view-tickets: "View Tickets"
+      edit: "Edit"
+      delete: "Delete"
       location-tbc: "Location TBC"
       date-tbc: "Date TBC"
     new:
@@ -97,6 +100,18 @@ en:
       published: "Do you want this event to be published now?"
 
   tickets:
+    index:
+      title: "Ticket Insights for "
+      unscanned: "Unscanned Tickets "
+      scanned: "Scanned Tickets "
+      scan-heading: "Scan Ticket"
+      unscan-heading: "Unscan Ticket"
+      first-name-heading: "First Name"
+      last-name-heading: "Last Name"
+      email-heading: "Email Address"
+      hash-heading: "Ticket Code"
+      scan: "Scan"
+      unscan: "Unscan"
     new:
       title: "Buy tickets"
       first-name: "First Name:"
@@ -111,6 +126,10 @@ en:
 
       tickets-sent: "Your tickets have been obtained, we have sent them to your email address."
       invalid-quantity: "Quantity must be between 1 and 5"
+    scan:
+      ticket-scanned: "Ticket Scanned"
+    unscan:
+      ticket-unscanned: "Ticket Unscanned"
 
   ticket_mailer:
     send_tickets_email:

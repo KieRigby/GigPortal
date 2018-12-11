@@ -16,12 +16,13 @@ Rails.application.routes.draw do
 
   #Nested resource routes for /event/:id/tickets/new
   resources :events do
-    resources :tickets, only: [:new,:create]
+    resources :tickets, only: [:index,:new,:create]
   end
 
   #Extra ticket routes
   #For QR Code scanning:
-  #get 'tickets/scan/', to: 'tickets#scan'
+  get 'tickets/scan/', to: 'tickets#scan'
+  get 'tickets/unscan/', to: 'tickets#unscan'
   #View tickets
   #resources :tickets, only: [:show]
 
