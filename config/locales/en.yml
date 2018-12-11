@@ -26,7 +26,7 @@ en:
   header:
     nav:
       home: "Home"
-      events: "Events"
+      events: "All Events"
       contact: "Contact"
       profile: "Profile"
 
@@ -47,6 +47,11 @@ en:
 
       no-email: "Please provide us with an email to contact you on."
       email-sent: "Thanks! Your message has been sent and we will aim to get back to you within 24 hours."
+    dashboard:
+      title: "Your Events"
+      published: "Published Events"
+      unpublished: "Unpublished Events"
+      past: "Past Events"
 
   contact_mailer:
     contact_email:

@@ -9,7 +9,9 @@ class Event < ApplicationRecord
   belongs_to :promoter
 
   scope :published, -> {where(published:true)}
+  scope :unpublished, -> {where(published:false)}
   scope :future, -> {where("date > ?", DateTime.now)}
+  scope :past, -> {where("date < ?", DateTime.now)}
   scope :promoter_events, -> (promoter) {where('promoter_id = ?',promoter.id)}
 
   def event_date_cannot_be_in_past

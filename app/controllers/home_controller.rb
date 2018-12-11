@@ -1,6 +1,15 @@
 class HomeController < ApplicationController
+  before_action :authenticate_promoter!, only: [:dashboard]
+
   def home
   end
+
+  def dashboard
+    @published = Event.published.future.promoter_events(current_promoter)
+    @unpublished = Event.unpublished.future.promoter_events(current_promoter)
+    @past = Event.past.promoter_events(current_promoter)
+  end
+
 
   def contact
   end

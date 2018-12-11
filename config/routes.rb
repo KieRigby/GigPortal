@@ -2,7 +2,11 @@ Rails.application.routes.draw do
 
   devise_for :promoters
   #Root view to the home controller home action
+  authenticated :promoter do
+    root 'home#dashboard', as: :authenticated_root
+  end
   root 'home#home'
+
   #Contact routes
   get 'contact', to: 'home#contact'
   post 'request_contact', to: 'home#request_contact'

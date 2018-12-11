@@ -1,0 +1,62 @@
+<div class='container' id='events'>
+  <div class='row'>
+    <div class='col-md-12'>
+    <h1><%= t('.title') %></h1>
+    <% if !notice.blank? %>
+      <div class='alert alert-success animated fadeInUp'><%= notice %></div>
+    <% end %>
+    </div>
+  </div>
+    <div class='row'>
+      <div class='col-md-12'>
+        <h3><%= t('.published') %></h3>
+      </div>
+    </div>
+    <div class='row'>
+      <% @published.each do |event| %>
+      <div class='col-md-4'>
+        <div class='event'>
+          <img src='https://placeimg.com/500/500/people' alt='<%= event.title %>'>
+          <h2><%= link_to event.title, event %></h2>
+          <span><%= event.location_tbc ? I18n.t('events.index.location-tbc') : event.location %> - <%= event.date_tbc ? I18n.t('events.index.date-tbc') : event.date.to_formatted_s(:long_ordinal) %></span>
+          <p><%= event.short_description %></p>
+        </div>
+      </div>
+      <% end %>
+    </div>
+    <div class='row'>
+      <div class='col-md-12'>
+        <h3><%= t('.unpublished') %></h3>
+      </div>
+    </div>
+    <div class='row'>
+      <% @unpublished.each do |event| %>
+      <div class='col-md-4'>
+        <div class='event'>
+          <img src='https://placeimg.com/500/500/people' alt='<%= event.title %>'>
+          <h2><%= link_to event.title, event %></h2>
+          <span><%= event.location_tbc ? I18n.t('events.index.location-tbc') : event.location %> - <%= event.date_tbc ? I18n.t('events.index.date-tbc') : event.date.to_formatted_s(:long_ordinal) %></span>
+          <p><%= event.short_description %></p>
+        </div>
+      </div>
+      <% end %>
+    </div>
+    <div class='row'>
+      <div class='col-md-12'>
+        <h3><%= t('.past') %></h3>
+      </div>
+    </div>
+    <div class='row'>
+      <% @past.each do |event| %>
+      <div class='col-md-4'>
+        <div class='event'>
+          <img src='https://placeimg.com/500/500/people' alt='<%= event.title %>'>
+          <h2><%= link_to event.title, event %></h2>
+          <span><%= event.location_tbc ? I18n.t('events.index.location-tbc') : event.location %> - <%= event.date_tbc ? I18n.t('events.index.date-tbc') : event.date.to_formatted_s(:long_ordinal) %></span>
+          <p><%= event.short_description %></p>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

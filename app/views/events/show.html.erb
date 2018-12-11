@@ -17,8 +17,16 @@
       <%= link_to new_event_ticket_path(@event.id) do %>
         <button type='button' class='btn btn-success'><%= fa_icon "ticket", text: t('.get-tickets') %></button>
       <% end %>
+      <% if promoter_signed_in? then %>
+        <% if @event.promoter_id == current_promoter.id then %>
+        <%= link_to edit_event_path(@event) do %>
+          <button type='button' class='btn btn-secondary'><%= fa_icon "edit" %></button>
+        <% end %>
+        <%= link_to @event, method: :delete, data: { confirm: 'Are you sure?' } do %>
+          <button type='button' class='btn btn-danger'><%= fa_icon "trash" %></button>
+        <% end %>
+      <% end %>
+      <% end %>
     </div>
   </div>
 </div>
-
-<%# <%= link_to 'Edit', edit_event_path(@event) %>
