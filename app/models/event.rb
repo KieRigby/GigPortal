@@ -8,6 +8,7 @@ class Event < ApplicationRecord
   has_many :tickets, dependent: :destroy
 
   scope :published, -> {where(published:true)}
+  scope :future, -> {where("date > ?", DateTime.now)}
 
   def event_date_cannot_be_in_past
     if date.present? && date < Date.today

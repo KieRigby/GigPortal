@@ -26,6 +26,7 @@ en:
   header:
     nav:
       home: "Home"
+      events: "Events"
       contact: "Contact"
 
   home:
@@ -58,8 +59,12 @@ en:
   events:
     index:
       title: "Events"
+      location-tbc: "Location TBC"
+      date-tbc: "Date TBC"
     show:
       get-tickets: "Get Tickets"
+      location-tbc: "Location TBC"
+      date-tbc: "Date TBC"
     new:
       title: "Create an Event"
     edit:
