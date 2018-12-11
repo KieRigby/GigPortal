@@ -44,7 +44,7 @@
     </div>
     <div class='col-md-4'>
       <%= label_tag 'quantity', t('.quantity') %>
-      <%= number_field_tag 'quantity', 1, class: 'form-control' %>
+      <%= number_field_tag 'quantity', 1, min:1, max:5, class: 'form-control' %>
     </div>
   </div>
   <div class='row'>
