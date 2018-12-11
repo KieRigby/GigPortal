@@ -23,7 +23,8 @@ class TicketsController < ApplicationController
 
     respond_to do |format|
       if @ticket.save
-        format.html { redirect_to new_event_ticket_path, notice: 'Event was successfully created.' }
+        TicketMailer.send_tickets_email(@ticket.first_name, @ticket.last_name, @ticket.event.id, @ticket.ticket_hash, @ticket.email).deliver_now
+        format.html { redirect_to new_event_ticket_path, notice: I18n.t('tickets.new.no-email') }
         format.json { render :show, status: :created, location: new_event_ticket_path }
       else
         format.html { render :new }

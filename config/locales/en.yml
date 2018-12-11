@@ -64,6 +64,12 @@ en:
       title: "Create an Event"
     edit:
       title: "Edit your Event"
+    create:
+      event-created: "Event was successfully created."
+    update:
+      event-updated: "Event was successfully updated."
+    destroy:
+      event-destroyed: "Event was successfully destroyed."
     form:
       error_explanation: "prevented this event from being saved:"
       event-title: "Title/Name:"
@@ -91,6 +97,8 @@ en:
       quantity: 'Number of Tickets:'
       submit: 'Get tickets'
       error_explanation: "prevented us from getting you tickets"
+
+      tickets_sent: "Your tickets have been obtained, we have sent them to your email address"
 
   ticket_mailer:
     send_tickets_email:
