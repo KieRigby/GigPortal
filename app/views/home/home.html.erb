@@ -1,2 +1,26 @@
-<h1>Welcome to GigPortal</h1>
-<%= render 'shared/flash' %>
+<div class='container' id='home'>
+  <div class='row'>
+    <div class='col-md-12'>
+      <%= render 'shared/flash' %>
+    </div>
+  </div>
+
+  <div class='row'>
+    <div class='col-md-12'>
+      <h1><%= t('.welcome') %></h1>
+    </div>
+  </div>
+
+  <div class='row'>
+    <div class='col-md-12'>
+      <h2><%= t('.sub-welcome') %></h2>
+    </div>
+  </div>
+
+  <div class='row'>
+    <div class='col-md-12'>
+      <h3><%= fa_icon 'ticket' %></h3>
+    </div>
+  </div>
+
+</div>
